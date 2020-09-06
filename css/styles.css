@@ -35,17 +35,6 @@
     scroll-behavior: smooth;
  }
 
- .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
- }
-
  body {
     height: 100%;
     display: flex;
@@ -68,6 +57,35 @@
     margin-right: auto;
     margin-left: auto;
     padding: 0 15px;
+ }
+
+ .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+ }
+
+ /* GREEN-LINK */
+
+ .green-link {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 24px;
+    color: #ffffff;
+    background-color: var(--main-green-color);
+    border-radius: 8px;
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
+ }
+
+ .green-link:hover {
+    opacity: 0.8;
  }
 
  /*  ===== SITE-HEADER =====  */
@@ -123,6 +141,8 @@
     text-decoration-color: rgba(0, 0, 0, 0.3);
  }
 
+ /* GET-DROPDOWN */
+
  .geo-link-box {
     position: relative;
     display: flex;
@@ -150,8 +170,6 @@
     color: var(--main-text-color);
     opacity: 0.5;
  }
-
- /* GET-DROPDOWN */
 
  .geo-dropdown {
     position: absolute;
@@ -191,14 +209,6 @@
  .geo-yes {
     display: inline-block;
     margin-right: 20px;
-    padding: 8px 20px;
-    font-size: 14px;
-    line-height: 24px;
-    color: #ffffff;
-    text-decoration: none;
-    background-color: var(--main-green-color);
-    border-radius: 8px;
-    transition: opacity .3s ease;
  }
 
  .geo-change-location {
@@ -352,6 +362,7 @@
     position: absolute;
     z-index: 2;
     width: 50%;
+    height: 50%;
     opacity: 0;
  }
 
@@ -454,18 +465,279 @@
  }
 
  .more-discount-givers-link {
-    width: 184px;
+    width: 147px;
     display: block;
     margin-right: auto;
     margin-left: auto;
     padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    color: #ffffff;
-    background-color: var(--main-green-color);
-    border-radius: 8px;
  }
 
- .more-discount-givers-link:hover {
-    opacity: 0.8;
+ /* OFFERS-SECTION */
+
+ .offers-section {
+    padding-top: 120px;
+    padding-bottom: 173px;
+ }
+
+ .offers-heading {
+    width: 715px;
+    margin: 0 auto;
+    margin-bottom: 34px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+ }
+
+ .offers-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    margin-bottom: 40px;
+    padding: 0;
+    list-style-type: none;
+ }
+
+ .offers-list-items {
+    width: 377px;
+ }
+
+ .offers-list-links {
+    display: inline-block;
+    text-decoration: none;
+ }
+
+ .offers-list-links::before {
+    width: 377px;
+    height: 236px;
+    display: inline-block;
+    margin-bottom: 15px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+    content: "";
+ }
+
+ .offers-list-links-1::before {
+    background-image: url(../img/offer1.jpg);
+ }
+
+ .offers-list-links-2::before {
+    background-image: url(../img/offer2.jpg);
+ }
+
+ .offers-list-links-3::before {
+    background-image: url(../img/offer3.jpg);
+ }
+
+ @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx) {
+    .offers-list-links-1::before {
+       background-image: url(../img/offer1@2x.jpg);
+    }
+    .offers-list-links-2::before {
+       background-image: url(../img/offer2@2x.jpg);
+    }
+    .offers-list-links-3::before {
+       background-image: url(../img/offer3@2x.jpg);
+    }
+ }
+
+ .offers-list-items-bottom {
+    display: flex;
+    align-items: center;
+ }
+
+ .offers-list-items-bottom:before {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    content: "";
+ }
+
+ .offers-list-items-bottom-1:before {
+    background-image: url(../img/partner-small3.jpg);
+ }
+
+ .offers-list-items-bottom-2:before {
+    background-image: url(../img/partner-small5.png);
+ }
+
+ .offers-list-items-bottom-3:before {
+    background-image: url(../img/partner-small1.png);
+ }
+
+ .offers-list-items-txt {
+    color: var(--main-text-color);
+ }
+
+ @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx) {
+    .offers-list-items-bottom-1:before {
+       background-image: url(../img/partner-small3@2x.png);
+    }
+    .offers-list-items-bottom-2:before {
+       background-image: url(../img/partner-small5@2x.png);
+    }
+    .offers-list-items-bottom-3:before {
+       background-image: url(../img/partner-small1@2x.png);
+    }
+ }
+
+ .offering-company {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    opacity: 0.5;
+ }
+
+ .offer-description {
+    margin: 0;
+    font-size: 18px;
+    line-height: 130%;
+ }
+
+ .more-offers-link {
+    width: 176px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 120px;
+ }
+
+ /* DISCOUNTS */
+
+ .discounts-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+ }
+
+ .discounts-box {
+    position: relative;
+    margin: 0 20px;
+ }
+
+ .discounts-box:not(:last-of-type) {
+    margin-bottom: 80px;
+ }
+
+ .discounts-img-box {
+    display: flex;
+    align-items: center;
+    padding: 19px;
+    background-color: #ffffff;
+    border-radius: 79px;
+ }
+
+ .discount-img-link {
+    position: relative;
+ }
+
+ .discount-img-link-1::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-text-color);
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    content: "3%";
+ }
+
+ .discount-img-link-2::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-text-color);
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    content: "1.5%";
+ }
+
+ .discount-img-link-3::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-text-color);
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    content: "5%";
+ }
+
+ .discount-img-link:not(:last-of-type) {
+    margin-right: 10px;
+ }
+
+ .discount-img {
+    border-radius: 50%;
+ }
+
+ .discounts-desription-wrapper {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 58%;
+ }
+
+ .discounts-desription-wrapper::before, .discounts-desription-wrapper::after {
+    position: absolute;
+    top: 0;
+    border-bottom: 20px solid transparent;
+    content: "";
+ }
+
+ .discounts-desription-wrapper::before {
+    left: 0;
+    transform: translateX(-90%);
+    border-right: 15px solid #ffffff;
+    border-left: 15px solid transparent;
+ }
+
+ .discounts-desription-wrapper::after {
+    right: 0;
+    transform: translateX(90%);
+    border-right: 15px solid transparent;
+    border-left: 15px solid #ffffff;
+ }
+
+ .discounts-description {
+    display: block;
+    padding: 14px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: #ffffff;
+    border-radius: 0 0 40px 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
  }
